@@ -61,17 +61,21 @@ h1 {
 }
 
 .image-container img {
+   display: flex;
+
    width: 100%;
    height: auto;
 }
 
 .card-items {
-   margin-top: -5px;
+   /* margin-top: -5px; */
    padding: 1.5em;
+
    background-color: #002930;
 }
 
 h2 {
    padding: 0.8em 0;
+
    font-size: 2em;
 }
