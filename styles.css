@@ -10,9 +10,8 @@ font-family: 'Comfortaa', cursive; */
 
 body {
    color: #dedede;
-   background-color: #dedede;
-
    font-family: 'Open Sans Condensed', sans-serif;
+   width: 100%;
 }
 
 /*-----------------------------*/
@@ -29,16 +28,12 @@ h1, h2 {
 
 h1 {
    font-size: 3em;
+   text-align: center;
 }
 
 .hero {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-
-   width: 100%;
-   height: 150px;
-
+   width: 100vw;
+   line-height: 150px;
    background-color: #002930;
 }
 
@@ -50,32 +45,58 @@ h1 {
 /*-----------------------------*/
 
 .container {
-   display: grid;
+   position: relative;
+   width: 1000px;
+   margin: 5% auto;
+}
 
-   width: 960px;
-   margin: 5em auto;
+.cards {
+   width: 31%;
+   margin-right: 3%;
+   display: inline-block;
+}
 
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: auto;
-   grid-column-gap: 1.5em;
+.cards:last-of-type {
+   margin-right: 0;
+}
+
+.image-container {
+   margin-bottom: -6px;
 }
 
 .image-container img {
-   display: flex;
-
    width: 100%;
    height: auto;
 }
 
 .card-items {
-   /* margin-top: -5px; */
-   padding: 1.5em;
+   padding: 0 1.5em 1.5em 1.5em;
 
    background-color: #002930;
 }
 
 h2 {
-   padding: 0.8em 0;
+   line-height: 5rem;
 
    font-size: 2em;
+}
+
+@media screen and (max-width: 1050px) {
+   .cards {
+      width: 100%;
+      margin-bottom: 50px;
+      margin-right: 0;
+   }
+   .container {
+      width: 60%;
+   }
+}
+
+@media screen and (max-width: 550px) {
+   .container {
+      width: 85%;
+   }
+   h1 {
+      font-size: 32px;
+   }
 }
